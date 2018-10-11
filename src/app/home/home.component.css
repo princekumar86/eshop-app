@@ -1,0 +1,32 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-container {
+    width: 99%;
+    height: 82vh;
+    margin: 15px;
+    border: 1px solid #555;
+  }
+  .mat-drawer {
+    width: 200px;
+}
+.mat-drawer-content {
+    margin-left: 200px;
+}
+  .mat-card {
+    width: 120px;
+    float: left;
+    margin: 10px;
+}
+.mat-card-content {
+    margin-bottom: 0px;
+    line-height: 3px;
+}
+a, a:visited {
+    color: white;
+}

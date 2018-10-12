@@ -9,7 +9,8 @@ import {
   MatToolbarModule,
   MatIconModule,
   MatSidenavModule,
-  MatCardModule
+  MatCardModule,
+  MatTableModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

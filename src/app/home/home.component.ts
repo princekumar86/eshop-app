@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent  implements OnInit {
   items_in_cart = 0;
   products;
+  tempcartitems;
+  data = {items: []};
 
   constructor(private http: HttpClient) { }
 
@@ -18,10 +20,36 @@ export class HomeComponent  implements OnInit {
       this.products =data["products"];
       console.log(this.products);
     });
+
+    // count any existing items in cart in local storage
+    var existingitems = localStorage.getItem('cartitems');
+    this.data = JSON.parse(existingitems);
+    this.items_in_cart = this.data.items.length;
+    
   }
 
-  addtocart(event, id) {
-    console.log("product added to cart "+ id);
+  addtocart(event, p) {
+    console.log("product added to cart "+ p.id);
+
+    var existingitems = localStorage.getItem('cartitems');
+    console.log(existingitems);
+    if(existingitems==null) {
+        console.log("no previous items in cart");
+        //create new item
+        this.data.items.push(
+          {id: p.id, name: p.name, price: p.price, quantity: 1}
+        );
+    } else {
+        console.log("already exsting item in cart");
+        // already exsting item in cart, so add/append items in cart
+        this.data.items.push(
+          {id: p.id, name: p.name, price: p.price, quantity: 1}
+        );
+
+    };
+    this.tempcartitems = JSON.stringify(this.data);
+    localStorage.setItem('cartitems', this.tempcartitems );
+
     this.items_in_cart = this.items_in_cart + 1;
   }
 

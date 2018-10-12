@@ -11,6 +11,7 @@ export class HomeComponent  implements OnInit {
   products;
   tempcartitems;
   data = {items: []};
+  tempcount = 0;
 
   constructor(private http: HttpClient) { }
 
@@ -30,6 +31,10 @@ export class HomeComponent  implements OnInit {
       var existingitems = localStorage.getItem('cartitems');
       this.data = JSON.parse(existingitems);
       this.items_in_cart = this.data.items.length;
+      for(var i = 0; i < this.data.items.length; i++) {
+        this.tempcount += this.data.items[i].quantity;
+        this.items_in_cart = this.tempcount;
+      }
     }
 
   }

@@ -12,6 +12,8 @@ export class HomeComponent  implements OnInit {
   tempcartitems;
   data = {items: []};
   tempcount = 0;
+  tempid;
+  flag_item_exists_incart = false;
 
   constructor(private http: HttpClient) { }
 
@@ -52,11 +54,22 @@ export class HomeComponent  implements OnInit {
           {id: p.id, name: p.name, price: p.price, quantity: 1}
         );
     } else {
-        console.log("already exsting item in cart");
         // already exsting item in cart, so add/append items in cart
-        this.data.items.push(
-          {id: p.id, name: p.name, price: p.price, quantity: 1}
-        );
+        // in case the same product exists then increase the quantity dont add another item in cart
+        this.flag_item_exists_incart = false;
+        for(var i = 0; i < this.data.items.length; i++) {
+          this.tempid = this.data.items[i].id;
+            if(this.tempid == p.id){
+              this.flag_item_exists_incart = true;
+              this.data.items[i].quantity += 1; // increase 1 quantity for this item
+            }
+        }
+        //
+        if(this.flag_item_exists_incart == false){ // then add new row / new item in cart
+          this.data.items.push(
+            {id: p.id, name: p.name, price: p.price, quantity: 1}
+          );
+        }
 
     };
     this.tempcartitems = JSON.stringify(this.data);

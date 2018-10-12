@@ -22,18 +22,25 @@ export class HomeComponent  implements OnInit {
     });
 
     // count any existing items in cart in local storage
-    var existingitems = localStorage.getItem('cartitems');
-    this.data = JSON.parse(existingitems);
-    this.items_in_cart = this.data.items.length;
     
+    if (localStorage.getItem("cartitems") === null) {
+      this.tempcartitems = JSON.stringify(this.data);
+      localStorage.setItem('cartitems', this.tempcartitems );
+    } else {
+      var existingitems = localStorage.getItem('cartitems');
+      this.data = JSON.parse(existingitems);
+      this.items_in_cart = this.data.items.length;
+    }
+
   }
 
   addtocart(event, p) {
     console.log("product added to cart "+ p.id);
 
     var existingitems = localStorage.getItem('cartitems');
-    console.log(existingitems);
-    if(existingitems==null) {
+    //console.log(existingitems);
+      //if(existingitems==null) {
+      if (localStorage.getItem("cartitems") === null) {
         console.log("no previous items in cart");
         //create new item
         this.data.items.push(

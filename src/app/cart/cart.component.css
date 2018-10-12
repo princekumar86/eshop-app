@@ -9,3 +9,13 @@ table {
   tr.mat-footer-row {
     font-weight: bold;
   }
+  .arrow_updown_wrapper {
+    width: 12px;
+    display: inline-table;
+  }
+.quantity {
+  font-size: 20px;
+}
+.mat-icon {
+  cursor: pointer;
+}

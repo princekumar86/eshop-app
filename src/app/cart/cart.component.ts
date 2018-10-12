@@ -46,4 +46,29 @@ export class CartComponent implements OnInit {
     this.table.renderRows();
   }
 
+  itemQuantityIncrease(index: number, row) {
+    console.log(this.data.items[index].quantity);
+    this.data.items[index].quantity += 1;
+    console.log(this.data.items[index].quantity);
+    this.tempcartitems = JSON.stringify(this.data);
+    localStorage.setItem('cartitems', this.tempcartitems ); // deleted from local storage by update it
+    this.dataSource = this.data.items; // deleted and updated dataSource for table
+    this.table.renderRows();
+  }
+
+  itemQuantityDecrease(index: number, row) {
+    if(this.data.items[index].quantity <= 1) {
+      // if quantity if already 1 remove item
+      this.removeAt(index);
+    } else {
+      // else decrease item quantity
+      this.data.items[index].quantity -= 1;
+      this.tempcartitems = JSON.stringify(this.data);
+      localStorage.setItem('cartitems', this.tempcartitems ); // deleted from local storage by update it
+      this.dataSource = this.data.items; // deleted and updated dataSource for table
+      this.table.renderRows();
+    }
+    
+  }
+
 }

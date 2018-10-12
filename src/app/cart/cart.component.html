@@ -42,7 +42,12 @@
   <!-- quantity Column -->
   <ng-container matColumnDef="quantity">
     <th mat-header-cell *matHeaderCellDef> Quantity </th>
-    <td mat-cell *matCellDef="let row"> {{row.quantity}} </td>
+    <td mat-cell *matCellDef="let row; let i = index;"><span class="quantity"> {{row.quantity}} </span>
+      <span class="arrow_updown_wrapper">
+        <mat-icon class="example-icon arrow_drop_up" (click)="itemQuantityIncrease(i, row)">arrow_drop_up</mat-icon>
+        <mat-icon class="example-icon arrow_drop_down" (click)="itemQuantityDecrease(i, row)">arrow_drop_down</mat-icon>
+      </span>
+    </td>
     <td mat-footer-cell *matFooterCellDef>  </td>
   </ng-container>
 

@@ -28,7 +28,13 @@ export class CartComponent implements OnInit {
 
   /** Gets the total cost of all transactions. */
   getTotalCost() {
-    return this.dataSource.map(t => t.price).reduce((acc, value) => acc + value, 0);
+    //return this.dataSource.map(t => t.price).reduce((acc, value) => acc + value, 0);
+    let sum: number = 0;
+    if (this.dataSource)
+      for (let row of this.dataSource) {
+        if (row.id != 0) sum += row.quantity*row.price;
+      }
+    return sum;
   }
 
   removeAll() {

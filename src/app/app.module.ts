@@ -3,6 +3,7 @@ import { NgModule, ModuleWithProviders  } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import {
   MatButtonModule, 
   MatCheckboxModule,
@@ -10,7 +11,8 @@ import {
   MatIconModule,
   MatSidenavModule,
   MatCardModule,
-  MatTableModule
+  MatTableModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -35,13 +37,15 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    InfiniteScrollModule,
     MatButtonModule, 
     MatCheckboxModule,
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

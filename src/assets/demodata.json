@@ -15,15 +15,15 @@
     },
     { 
         "id": "103",
-        "name": "product name", 
-        "price" : 25000, 
+        "name": "Samsung G5", 
+        "price" : 24000, 
         "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
         "stock": "10"
     },
     { 
         "id": "104",
-        "name": "product name", 
-        "price" : 25000, 
+        "name": "remi note 2", 
+        "price" : 18000, 
         "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
         "stock": "10"
     },
@@ -106,6 +106,118 @@
     },
     { 
         "id": "116",
+        "name": "product name", 
+        "price" : 25000, 
+        "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
+        "stock": "10"
+    },
+    { 
+        "id": "117",
+        "name": "Redmi Y2", 
+        "price" : 87000, 
+        "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Wave1/MI/Redmiy232GB/D6319129_Wave1_RedmiY264GB_Hindi_dashboard_520x520._CB482944767_SY520_.jpg",
+        "stock": "10"
+    },
+    { 
+        "id": "118",
+        "name": "honor s9", 
+        "price" : 48900, 
+        "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Wave1/V50894355_Wave-1-Honor_family-English_dashboard_card_520x520._CB482750825_SY520_.jpg",
+        "stock": "10"
+    },
+    { 
+        "id": "119",
+        "name": "product name", 
+        "price" : 25000, 
+        "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
+        "stock": "10"
+    },
+    { 
+        "id": "120",
+        "name": "product name", 
+        "price" : 25000, 
+        "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
+        "stock": "10"
+    },
+    { 
+        "id": "121",
+        "name": "samsung A4", 
+        "price" : 25000, 
+        "image": "https://images-eu.ssl-images-amazon.com/images/I/41INpKtZV-L._AC_US327_FMwebp_QL65_.jpg",
+        "stock": "10"
+    },
+    { 
+        "id": "122",
+        "name": "Redmi Y2 Gold", 
+        "price" : 91000, 
+        "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Wave1/MI/Redmiy232GB/D6319129_Wave1_RedmiY264GB_Hindi_dashboard_520x520._CB482944767_SY520_.jpg",
+        "stock": "10"
+    },
+    { 
+        "id": "123",
+        "name": "product name", 
+        "price" : 25000, 
+        "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
+        "stock": "10"
+    },
+    { 
+        "id": "124",
+        "name": "product name", 
+        "price" : 25000, 
+        "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
+        "stock": "10"
+    },
+    { 
+        "id": "125",
+        "name": "Redmi Y2", 
+        "price" : 87000, 
+        "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Wave1/MI/Redmiy232GB/D6319129_Wave1_RedmiY264GB_Hindi_dashboard_520x520._CB482944767_SY520_.jpg",
+        "stock": "10"
+    },
+    { 
+        "id": "126",
+        "name": "samsung A4", 
+        "price" : 25000, 
+        "image": "https://images-eu.ssl-images-amazon.com/images/I/41INpKtZV-L._AC_US327_FMwebp_QL65_.jpg",
+        "stock": "10"
+    },
+    { 
+        "id": "127",
+        "name": "honor s9", 
+        "price" : 48900, 
+        "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Wave1/V50894355_Wave-1-Honor_family-English_dashboard_card_520x520._CB482750825_SY520_.jpg",
+        "stock": "10"
+    },
+    { 
+        "id": "128",
+        "name": "product name", 
+        "price" : 25000, 
+        "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
+        "stock": "10"
+    },
+    { 
+        "id": "129",
+        "name": "product name", 
+        "price" : 25000, 
+        "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
+        "stock": "10"
+    },
+    { 
+        "id": "130",
+        "name": "honor s9", 
+        "price" : 48900, 
+        "image": "https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/Wave1/V50894355_Wave-1-Honor_family-English_dashboard_card_520x520._CB482750825_SY520_.jpg",
+        "stock": "10"
+    },
+    { 
+        "id": "131",
+        "name": "product name", 
+        "price" : 25000, 
+        "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",
+        "stock": "10"
+    },
+    { 
+        "id": "132",
         "name": "product name", 
         "price" : 25000, 
         "image": "https://www.troublemakercustomleather.com/image/cache/catalog/placeholderproduct-500x500.png",

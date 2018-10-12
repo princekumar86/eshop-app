@@ -14,13 +14,25 @@ export class HomeComponent  implements OnInit {
   tempcount = 0;
   tempid;
   flag_item_exists_incart = false;
+  tempArrayProducts;
+  allProducts;
+  spinnerShow = false;
+  products_loaded_upto = 0;
+  products_to_load_untill = 0;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void { // adding the lifecycle hook ngOnInit
     this.http.get('/assets/demodata.json').subscribe(data => {
       console.log(data); // using the HttpClient instance, http to call the API then subscribe to the data and display to console
-      this.products =data["products"];
+      //this.products =data["products"];
+      this.allProducts = data["products"];
+      console.log(this.allProducts);
+      this.tempArrayProducts =data["products"];
+      this.tempArrayProducts =this.allProducts.slice(0,10); // initiall load only 10 items
+      this.products_loaded_upto = 10;
+      this.products_to_load_untill = 15;
+      this.products = this.tempArrayProducts;
       console.log(this.products);
     });
 
@@ -77,5 +89,32 @@ export class HomeComponent  implements OnInit {
 
     this.items_in_cart = this.items_in_cart + 1;
   }
+
+  onScrollDown() {
+    console.log('scrolled down!!');
+    
+    this.products_loaded_upto += 5; // load 5 more products
+    this.products_to_load_untill += 5;
+
+      if(this.allProducts.length < this.products_to_load_untill) // if no more products tobe loaded
+      {
+        // do nothing
+      } else {
+        this.spinnerShow = true;
+        // load more items
+        this.tempArrayProducts =this.allProducts.slice(this.products_loaded_upto, this.products_to_load_untill); // load 5 more items
+        this.products = this.products.concat(this.tempArrayProducts);
+        setTimeout(() => {
+          this.spinnerShow = false;
+        }, 2000); // since this is for demonstration purpose the snipper is hardcoded for 2 seconds, in realtime it will be dynamic
+      }
+      
+    
+  }
+ 
+  onScrollUp() {
+    console.log('scrolled up!!');
+  }
+
 
 }
